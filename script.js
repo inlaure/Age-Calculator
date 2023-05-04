@@ -33,7 +33,7 @@ function setSuccess(input) {
   parent.querySelector('.error').textContent = '';
 }
 
-const dataValidation = function () {
+function dataValidation() {
   let valid = true;
   if (!dayInput.value || !monthInput.value || !yearInput.value) {
     inputData.forEach(i => {
@@ -97,7 +97,7 @@ const dataValidation = function () {
     valid = true;
   }
   return valid;
-};
+}
 
 btn.addEventListener('click', function (e) {
   let dayOutput, monthOutput, yearOutput;
