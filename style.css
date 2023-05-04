@@ -1,0 +1,141 @@
+:root {
+  --off-white: #faf5e0;
+  --purple: #5b278b;
+  --lightGrey: #b6b6b6;
+  --darkGrey: #222;
+  --white: #fff;
+  --red: #ff4242;
+  --transparent-grey: #b6b6b6a9;
+  --light-purple: #653294;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--off-white);
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  background-color: var(--white);
+  width: 60rem;
+  height: 50rem;
+  border-radius: 2rem 2rem 20rem 2rem;
+  padding: 2rem 4rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--lightGrey);
+  margin-bottom: 3.6rem;
+}
+
+.day-input,
+.month-input,
+.year-input {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 9.6rem;
+  height: 4.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--lightGrey);
+  color: var(--darkGrey);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-left: 0.8rem;
+}
+
+input:focus {
+  outline: none;
+  border: var(--purple) 1px solid;
+}
+
+input::placeholder {
+  opacity: 50%;
+}
+
+.line-btn {
+  position: relative;
+  margin-bottom: 3.6rem;
+}
+
+.line {
+  border-bottom: 1px var(--transparent-grey) solid;
+  opacity: 50%;
+}
+
+.btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem 0 var(--light-purple);
+  border: none;
+  font-size: 4rem;
+  background-color: var(--purple);
+  color: var(--off-white);
+  padding-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+  background-color: var(--light-purple);
+  box-shadow: 0 0 2rem 0 var(--light-purple);
+}
+
+.result-container {
+  font-size: 7.4rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.age-container {
+  animation: fadeIn 2s;
+}
+
+span {
+  color: var(--purple);
+}
+
+.error {
+  display: block;
+  color: var(--red);
+  text-transform: none;
+  padding-left: 0.4rem;
+  font-size: 1rem;
+  visibility: visible;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}

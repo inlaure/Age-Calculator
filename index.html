@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The app calculates your age based on entered data."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Age calculator app</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form class="input-container">
+          <div class="day-input">
+            <label for="day">day</label
+            ><input
+              id="day"
+              class="day"
+              type="number"
+              placeholder="DD"
+              value=""
+            />
+            <p class="error day-error"></p>
+          </div>
+          <div class="month-input">
+            <label for="month">month</label
+            ><input
+              id="month"
+              class="month"
+              type="number"
+              placeholder="MM"
+              value=""
+            />
+            <p class="error month-error"></p>
+          </div>
+          <div class="year-input">
+            <label for="year">Year</label
+            ><input
+              id="year"
+              class="year"
+              type="number"
+              placeholder="YYYY"
+              value=""
+            />
+            <p class="error year-error"></p>
+          </div>
+        </form>
+        <div class="line-btn">
+          <div class="line"></div>
+          <button class="btn">&darr;</button>
+        </div>
+        <div class="result-container">
+          <div class="age-year"><span>--</span> years</div>
+          <div class="age-month"><span>--</span> months</div>
+          <div class="age-day"><span>--</span> days</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
